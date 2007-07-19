@@ -24,7 +24,7 @@ Url: http://cpufreqd.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPL
 Requires(preun,post): rpm-helper
-Buildrequires: automake1.8 libcpufreq-devel
+Buildrequires: automake libcpufreq-devel
 Requires: %{lib_name} 
 
 %description
@@ -50,9 +50,9 @@ by %{name}.
 %patch0 -p0
 %patch1 -p1 -b .defaults
 #(misc) Patch on the makefile, needed to recreate it.
-aclocal-1.8
-autoconf-2.5x
-automake-1.8 -a
+aclocal
+autoconf
+automake -a
 
 %build
 %configure2_5x 
