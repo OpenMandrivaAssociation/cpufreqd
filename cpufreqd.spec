@@ -21,7 +21,6 @@ Patch0: %{name}.Makefile.patch
 # (fc) 1.2.3-2mdk add more cpu intensive programs to full power mode
 Patch1: cpufreqd-2.1.1-defaults.patch
 Url: http://cpufreqd.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPL
 Requires(preun,post): rpm-helper
 Buildrequires: automake libcpufreq-devel
