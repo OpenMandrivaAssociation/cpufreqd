@@ -80,7 +80,7 @@ automake -a
 
 %files
 %defattr(-,root,root,0755)
-%doc AUTHORS COPYING INSTALL README TODO 
+%doc AUTHORS README TODO NEWS ChangeLog
 %attr(755,root,root) %{_sbindir}/cpufreqd
 %config(noreplace) %attr(644,root,root) %{_sysconfdir}/cpufreqd.conf
 %config(noreplace) %attr(755,root,root) %{_initrddir}/%{name}
