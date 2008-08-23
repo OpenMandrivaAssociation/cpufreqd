@@ -25,6 +25,7 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
 Requires(preun,post): rpm-helper
 Buildrequires: automake libcpufreq-devel
+BuildRequires: libsysfs-devel
 Requires: %{lib_name} 
 
 %description
