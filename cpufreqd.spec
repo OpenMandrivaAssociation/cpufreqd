@@ -1,6 +1,6 @@
 %define name cpufreqd
-%define version 2.2.1
-%define release %mkrel 3
+%define version 2.3.3
+%define release %mkrel 1
 %define lib_name %mklibname %name 
 
 # (misc) about the rpmlint warning.
@@ -22,7 +22,7 @@ Patch0: %{name}.Makefile.patch
 Patch1: cpufreqd-2.1.1-defaults.patch
 Url: http://cpufreqd.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-buildroot
-License: GPL
+License: GPLv2+
 Requires(preun,post): rpm-helper
 Buildrequires: automake libcpufreq-devel
 Requires: %{lib_name} 
