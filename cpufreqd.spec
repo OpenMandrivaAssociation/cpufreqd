@@ -20,7 +20,7 @@ Source2: cpufreq_defaults.bz2
 Patch0: %{name}.Makefile.patch
 # (fc) 1.2.3-2mdk add more cpu intensive programs to full power mode
 Patch1: cpufreqd-2.1.1-defaults.patch
-Url: http://cpufreqd.sourceforge.net/
+Url: http://www.linux.it/~malattia/wiki/index.php/Cpufreqd
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
 Requires(preun,post): rpm-helper
@@ -51,9 +51,10 @@ by %{name}.
 %patch0 -p0
 %patch1 -p1 -b .defaults
 #(misc) Patch on the makefile, needed to recreate it.
-aclocal
-autoconf
-automake -a
+#aclocal
+#autoconf
+#automake -a
+autoreconf -fiv
 
 %build
 %configure2_5x 
@@ -65,11 +66,11 @@ automake -a
 
 %makeinstall
 
-%{__install} -d $RPM_BUILD_ROOT{%{_sysconfdir}/sysconfig,%{_initrddir}}
-%{__bzip2} -dc %{SOURCE1} > $RPM_BUILD_ROOT/%{_initrddir}/%{name}
-%{__install} -d $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
-%{__install} -d $RPM_BUILD_ROOT%{_datadir}/%{name}
-%{__bzip2} -dc %{SOURCE2} > $RPM_BUILD_ROOT%{_datadir}/%{name}/cpufreq_defaults
+%{__install} -d %{buildroot}{%{_sysconfdir}/sysconfig,%{_initrddir}}
+%{__bzip2} -dc %{SOURCE1} > %{buildroot}/%{_initrddir}/%{name}
+%{__install} -d %{buildroot}%{_sysconfdir}/%{name}
+%{__install} -d %{buildroot}%{_datadir}/%{name}
+%{__bzip2} -dc %{SOURCE2} > %{buildroot}%{_datadir}/%{name}/cpufreq_defaults
 %clean
 %{__rm} -rf ${RPM_BUILD_ROOT}
 
