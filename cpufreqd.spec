@@ -1,6 +1,6 @@
 %define name cpufreqd
-%define version 2.3.3
-%define release %mkrel 2
+%define version 2.3.4
+%define release %mkrel 1
 %define lib_name %mklibname %name 
 
 # (misc) about the rpmlint warning.
@@ -14,7 +14,7 @@ Summary: CPU frequency scaling daemon
 Version: %{version}
 Release: %{release}
 Group: System/Kernel and hardware
-Source: %{name}-%{version}.tar.bz2
+Source: http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Source1: %{name}.init.mdk.bz2
 Source2: cpufreq_defaults.bz2
 Patch0: %{name}.Makefile.patch
