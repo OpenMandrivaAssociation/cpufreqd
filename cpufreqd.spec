@@ -1,6 +1,6 @@
 %define name cpufreqd
-%define version 2.3.4
-%define release %mkrel 3
+%define version 2.4.1
+%define release %mkrel 1
 %define lib_name %mklibname %name 
 
 # (misc) about the rpmlint warning.
