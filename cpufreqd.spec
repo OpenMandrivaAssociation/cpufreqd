@@ -1,6 +1,6 @@
 %define name cpufreqd
 %define version 2.4.2
-%define release %mkrel 2
+%define release %mkrel 3
 %define lib_name %mklibname %name 
 
 # (misc) about the rpmlint warning.
@@ -20,6 +20,8 @@ Source2: cpufreq_defaults.bz2
 Patch0: %{name}.Makefile.patch
 # (fc) 1.2.3-2mdk add more cpu intensive programs to full power mode
 Patch1: cpufreqd-2.1.1-defaults.patch
+# add patch from upstream to fix a buffer overflow with gcc-4.5
+Patch2: cpufreqd-2.4.2-fix-segfault-when-calling-realpath.patch
 Url: http://www.linux.it/~malattia/wiki/index.php/Cpufreqd
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
@@ -50,6 +52,7 @@ by %{name}.
 %setup -q -n %{name}-%{version}
 %patch0 -p0
 %patch1 -p1 -b .defaults
+%patch2 -p1 -b .segfault
 #(misc) Patch on the makefile, needed to recreate it.
 #aclocal
 #autoconf
