@@ -65,7 +65,7 @@ autoreconf -fiv
 
 %install
 
-%{__rm} -rf ${RPM_BUILD_ROOT}
+%{__rm} -rf %{buildroot}
 
 %makeinstall
 
@@ -75,7 +75,7 @@ autoreconf -fiv
 %{__install} -d %{buildroot}%{_datadir}/%{name}
 %{__bzip2} -dc %{SOURCE2} > %{buildroot}%{_datadir}/%{name}/cpufreq_defaults
 %clean
-%{__rm} -rf ${RPM_BUILD_ROOT}
+%{__rm} -rf %{buildroot}
 
 %post
 %_post_service %{name}
