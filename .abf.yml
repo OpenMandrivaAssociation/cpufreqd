@@ -1,4 +1,4 @@
 sources:
-  "cpufreqd-2.4.2.tar.bz2:"	88ff75f3f3d457c49178f1e557ba5435651e1427
-  "cpufreq_defaults.bz2:"	e1cc9ed5ccc721163fa9343b52683fea4ac6ceb4
-  "cpufreqd.init.mdk.bz2:"	07cbdbd6a6ec6b934a1fac310c7db8d5ae5c2399
+  "cpufreq_defaults.bz2": e1cc9ed5ccc721163fa9343b52683fea4ac6ceb4
+  "cpufreqd-2.4.2.tar.bz2": 88ff75f3f3d457c49178f1e557ba5435651e1427
+  "cpufreqd.init.mdk.bz2": 07cbdbd6a6ec6b934a1fac310c7db8d5ae5c2399
