@@ -22,7 +22,7 @@ Patch0: %{name}.Makefile.patch
 Patch1: cpufreqd-2.1.1-defaults.patch
 # add patch from upstream to fix a buffer overflow with gcc-4.5
 Patch2: cpufreqd-2.4.2-fix-segfault-when-calling-realpath.patch
-Url: http://www.linux.it/~malattia/wiki/index.php/Cpufreqd
+Url: https://www.linux.it/~malattia/wiki/index.php/Cpufreqd
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
 Requires(preun,post): rpm-helper
