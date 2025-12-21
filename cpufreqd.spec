@@ -26,6 +26,9 @@ Url: https://www.linux.it/~malattia/wiki/index.php/Cpufreqd
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPLv2+
 Requires(preun,post): rpm-helper
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: automake
 BuildRequires: libcpufreq-devel
 BuildRequires: sysfsutils-devel
